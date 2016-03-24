@@ -76,7 +76,7 @@ namespace SportsComplex.Repositories
                     command.Parameters.AddWithValue("@areaMax", maxArea);
                     command.Parameters.AddWithValue("@rateMin", minRate);
                     command.Parameters.AddWithValue("@rateMax", maxRate);
-
+// maby, it will be usefully to create stored procedur? 
                     if (sportsHallType != null)
                     {
                         command.Parameters.AddWithValue("@hallTypeId", sportsHallType.Id);
@@ -145,7 +145,7 @@ namespace SportsComplex.Repositories
 
             return sportsHalls;
         }
-
+// Review - Olya: you should declare class fields before method. 
         private const string getFreeHallsByFilter = @"SELECT c.Id, c.ClassTypeId as [TypeId], ct.Name as [TypeName], c.Area,                                            c.Rate, c.[Status]
 	                                                FROM [tblClass] c
 	                                                INNER JOIN [tblClassType] ct  ON c.ClassTypeId = ct.Id
