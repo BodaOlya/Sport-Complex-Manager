@@ -132,7 +132,7 @@ namespace SportsComplex.DesktopUI
                 MessageBox.Show("Please, chose sports hall", "Info");
             }
         }
-
+        // Review Olya:  you should declare class filds before method
         private SqlSportsHallsRepository _sportsHallsRepository;
         private SqlSportsHallTypesRepository _sportsHallTypesRepository;
         private SqlRentersRepository _rentersRepository;
