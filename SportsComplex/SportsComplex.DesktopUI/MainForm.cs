@@ -99,8 +99,8 @@ namespace SportsComplex.DesktopUI
 
         private void cbRenter_DropDown(object sender, EventArgs e)
         {
+            //Review Olya: You can refactor your code using cltr + k + d
             cbRenter.Items.Clear();
-
             var rents = _rentsRepository.GetRentsOnDate(DateTime.Now);
             var orderedRents = from r in rents
                         orderby r.Renter.LastName, r.Renter.FirstName
@@ -134,7 +134,7 @@ namespace SportsComplex.DesktopUI
             AboutForm frmAbout = new AboutForm();
             frmAbout.ShowDialog();
         }
-
+// Review Olya:  You should declare class fields before method
         private string connString = ConfigurationManager.ConnectionStrings["SportsComplexConnectionString"].ConnectionString;
         // Repositories.
         private SqlRentsRepository _rentsRepository;
