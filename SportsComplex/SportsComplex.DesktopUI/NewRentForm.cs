@@ -43,7 +43,7 @@ namespace SportsComplex.DesktopUI
             nudRateMax.Value = halls.Max((h) => h.Rate);
             dtpTimeTo.Value = dtpTimeTo.Value.AddHours(1);
         }
-
+// Review - Olya: you could made new class(for example public and static) and move there this method. But it is only my recomendation.
         public void UpdateSportsHallsDataGridView(IEnumerable<SportsHall> halls)
         {
             dgvSportsHalls.Rows.Clear();
@@ -132,7 +132,7 @@ namespace SportsComplex.DesktopUI
                 MessageBox.Show("Please, chose sports hall", "Info");
             }
         }
-
+// you should declare class filds before methods
         private SqlSportsHallsRepository _sportsHallsRepository;
         private SqlSportsHallTypesRepository _sportsHallTypesRepository;
         private SqlRentersRepository _rentersRepository;
